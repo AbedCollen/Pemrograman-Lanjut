@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        Masukkan jumlah uang yang ingin ditarik
+        <br><h:inputText id="tarik" size="8" maxlength="8" value="#{userActionBean.jumlah}" /></br>
+        <br>Saldo sekarang</br>
+        <h4><h:outputText escape="false" value="#{userActionBean.peringatan2()}" />
+            <h:outputText escape="false" value="Rp #{userActionBean.tarik()}" />            
+            <h:outputText escape="false" value="#{userActionBean.peringatan()}" /></h4>
+            <h:commandButton id="submit-button" value="Submit" action="tarik" />
+            <br></br>
+            <br><h:commandButton id="backButton" value="Back" action="index"/></br>
+        </h:form>
+    </h:body>
+</html>
